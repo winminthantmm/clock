@@ -1,36 +1,47 @@
 *{
- margin: 0;
+  margin: 0;
  padding: 0;
  box-sizing: border-box;
 }
 .container{
- width: auto;
- height: 100dvh;
- background-color: black;
- display: flex;
+  width: auto;
+  height: 100dvh;
+  background-color: black;
+ display: grid;
  justify-content: center;
  align-items: center;
 }
 
 .clockBox{
-padding: 20px;
-  display: flex;
- justify-content: center;
- align-items: center;
- background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
- border-radius: 30px;
- animation: rotate 1.5s linear infinite;
+  width: auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 30px;
+  animation: rotate 1.5s linear infinite;
 }
 .time{
- background-color: black;
- padding: 20px;
- border-radius: 10px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align:center;
 }
+
 #current-time{
- font-size: 180px;
- background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
- -webkit-background-clip: text;
+  font-size: 180px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
  -webkit-text-fill-color:transparent ;
+}
+@media (max-width:1025px) {
+  #current-time{
+  font-size: 80px;
+  }
+}
+@media (max-width:545px) {
+.clockBox {
+  width: 650px;
+  transform: rotate(90deg);
+}
 }
 
 @keyframes rotate {
