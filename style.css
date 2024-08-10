@@ -1,0 +1,40 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+.container{
+ width: auto;
+ height: 100dvh;
+ background-color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.clockBox{
+padding: 20px;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+ border-radius: 30px;
+ animation: rotate 1.5s linear infinite;
+}
+.time{
+ background-color: black;
+ padding: 20px;
+ border-radius: 10px;
+}
+#current-time{
+ font-size: 180px;
+ background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color:transparent ;
+}
+
+@keyframes rotate {
+ 100%{
+  filter: hue-rotate(360deg);
+ }
+}

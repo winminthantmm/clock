@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOWTIME</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<section class="container">
+ <div class="clockBox">
+  <div class="time">
+   <span id="current-time">12:00:00 PM</span>
+  </div>
+
+ </div>
+</section>
+<script>
+setInterval(() => {
+  const timeTag = document.querySelector("#current-time");
+ let date = new Date();
+ let hours = date.getHours();
+ let minutes = date.getMinutes();
+ let seconds = date.getSeconds();
+ let day_night = "AM";
+
+ if(hours > 12) {
+  day_night = "PM"
+  hours = hours - 12;
+ }
+ hours = hours > 10 ? hours : "0" + hours;
+ minutes = minutes > 10 ? minutes : "0" + minutes;
+ seconds = seconds > 10 ? seconds : "0" + seconds;
+ timeTag.textContent = hours +":" + minutes +":" + seconds + " " + day_night;
+},);
+</script>
+  </body>
+</html>
